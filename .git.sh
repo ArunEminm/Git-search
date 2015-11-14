@@ -1,3 +1,10 @@
+if [ -z "$1" ]
+then 
+    echo "please supply a search string"
+    exit
+fi
+
+
 hist=`git log --pretty=format:"%h"`
 
 for i in $hist
