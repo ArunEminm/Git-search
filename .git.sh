@@ -2,11 +2,11 @@ hist=`git log --pretty=format:"%h"`
 
 for i in $hist
 do
-    count=`git show $i |grep $1 -c`
+    count=`git show $i |grep "$1" -c`
     if [ $count -gt 0 ]
     then
         git show $i --pretty="%h%n%an%n%ar%n%ad" --no-patch
-        git show $i |grep $1 --colour
+        git show $i |grep "$1" --colour
         read -n 1 -s
     fi
 done
