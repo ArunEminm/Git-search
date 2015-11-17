@@ -1,1 +1,7 @@
-ln -s $PWD/.git.sh /usr/bin/gcs
+FILE=$PWD/.git.sh
+INSTALATION_DIR=/usr/local/bin
+COPIED_FILE=$INSTALATION_DIR/.git.sh
+LINKED_FILE=$INSTALATION_DIR/gcs
+
+cp $FILE $COPIED_FILE
+ln -s $COPIED_FILE $LINKED_FILE
