@@ -4,10 +4,8 @@ This small script searches through commit diffs. Can be used to find commit whic
 
 example:
 
-./git.sh [SEARCH_STRING]
+gcs [SEARCH_STRING]
 
 
 ##to install
-sudo ./install.sh
-
-then use gcs [SEARCH_STRING]
+sudo make install
