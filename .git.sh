@@ -13,7 +13,7 @@ do
     if [ $count -gt 0 ]
     then
         git show $i --pretty="%h%n%an%n%ar%n%ad" --no-patch
-        git show $i |grep "$1" --colour
+        git show $i |grep -E "$1" --colour
         read -n 1 -s
     fi
 done
